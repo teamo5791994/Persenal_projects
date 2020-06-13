@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dataset &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Methods" href="Methods.html" />
+    <link rel="prev" title="Background" href="background.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../SIC/index.html">Thesis: Sea Ice Concentration Retrieval</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Water Quality Retrieval Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#satellite-dataset">Satellite Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#landsat-8-oli-data-pre-processing">Landsat-8 OLI data pre-processing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring-site-database">Monitoring Site Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samples">Samples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ndwi">NDWI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spectral-sample">Spectral Sample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-features">Additional features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Methods.html">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Results.html">Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discussion.html">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../LUC/index.html">Land-use Classification Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Water Quality Retrieval Project</a> &raquo;</li>
+        
+      <li>Dataset</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/WQR/Dataset.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dataset">
+<h1>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="satellite-dataset">
+<h2>Satellite Dataset<a class="headerlink" href="#satellite-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Landsat8 OLI has 9 bands with a wavelength ranging from 433 to 1390 nm, respectively.
+In the first phase, Landsat8 Operational Land Imager (Landsat8 OLI) images were used in this case study.</p>
+<p>13 Landsat-8 scenes around Yangtze river in China were picked up based on shp files intersection.
+These scenes from 2019-01-01 to 2019-10-01 were auto-downloaded
+from AWS and filtered by the 5% cloud cover for every 16 days.
+87 Landsat8 images were finally used in this study,
+followed by the radiometric calibration, QUAC and Gram-Schmidt pan-sharpening operations.</p>
+<div class="section" id="landsat-8-oli-data-pre-processing">
+<h3>Landsat-8 OLI data pre-processing<a class="headerlink" href="#landsat-8-oli-data-pre-processing" title="Permalink to this headline">¶</a></h3>
+<p>Radiometric Calibration converts the origin Digital Number (DN) into radiance pixel values or reflectance
+with the aim of reducing sensor errors.
+<a class="reference external" href="https://www.harrisgeospatial.com/docs/RadiometricCalibration.html">https://www.harrisgeospatial.com/docs/RadiometricCalibration.html</a></p>
+<p>Atmospheric Correction converts radiance or surface reflectivity to actual reflectivity on the ground to
+eliminate errors caused by atmospheric scattering, absorption, and reflection.</p>
+<p>In order to implement auto-processing, the QUCA atmospheric correction method was used.
+Experiment shows that compared with Flaash atmospheric correction, the accuracy difference is within 10%.
+<a class="reference external" href="../_static/_asset/The_Quick_Atmospheric.pdf">reference</a>.</p>
+<p>Pan-sharpening improve spatial resolution to 15m by usage of Gram-Schmidt transformation on the simulated panchromatic band
+and the spectral bands.
+<a class="reference external" href="https://www.harrisgeospatial.com/docs/GramSchmidtSpectralSharpening.html">https://www.harrisgeospatial.com/docs/GramSchmidtSpectralSharpening.html</a></p>
+<p>Here we used self-defined tools to implement pre-processing process.
+Another way is to call ENVIPyEngine (Envi version &gt;= 5.4) package to do all the data pre-processing work in python.</p>
+</div>
+</div>
+<div class="section" id="monitoring-site-database">
+<h2>Monitoring Site Database<a class="headerlink" href="#monitoring-site-database" title="Permalink to this headline">¶</a></h2>
+<p>Generally speaking, the lack of reliable labels (ground truth) is the key issue for the classification task of remote sensing images.
+Luckily, in this case study, the water quality monitoring system provides sufficient and high-accuracy ground truth data starting from 2019-01-01.
+Around 10 water parameter values are being recorded every 4 hours.
+Database also provides the water quality levels according to the GB3838-2002 standard.</p>
+<p>Although there are total 2796 monitoring sites in China. As shown in the image:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/monitoring_sites.png"><img alt="../../_images/monitoring_sites.png" src="../../_images/monitoring_sites.png" style="width: 550px;" /></a>
+</div>
+<p>Most of them are installed for monitoring city rivers which can not be recognized by spacial resolution of Landsat8 images.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/l8_ms.png"><img alt="../../_images/l8_ms.png" src="../../_images/l8_ms.png" style="width: 550px;" /></a>
+</div>
+<p>The monitoring dataset also contains some invalid or missing values. For example,
+due to the sensor malfunction, some water parameter values are 0 even minus.
+Or timestamp is not proper-hour distribution. These type of errors are removed and filtered by data cleaning process.
+Finally, data from 147 monitoring sites located along Yangtze river and surrounding lakes was used as training inputs.</p>
+</div>
+<div class="section" id="samples">
+<h2>Samples<a class="headerlink" href="#samples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ndwi">
+<h3>NDWI<a class="headerlink" href="#ndwi" title="Permalink to this headline">¶</a></h3>
+<p>Water bodies in each image were recognized by improved Normalized Difference Water Index (NDWI).</p>
+<p>NDWI = (p(Green)-p(NIR))/(p(Green)+p(NIR))</p>
+<p>An experiential value 0.04 was set as threshold to automatically and quickly identify where is water bodies.
+However, the constant threshold would misclassify other objects as water which the value of band 3 (Green) is larger than band 5 (NIR).
+For example, a monitoring site is surrounded by little cloud (figure upper left).
+So, we added extra constrains to results from NDWI.</p>
+<p>One was to stipulate the trend of spectral profile.
+Typically, the spectral of water has a trend of increasing from band 1 to band 3 or band 4 and then decreasing substantially.
+The other was to restrict the range of spectral profile.
+The spectral range of water normally fluctuates between 600 and 1500, and is affected by the sensor image quality and
+image preprocessing.
+After adding these filters, the vast majority of the rest of results were pure water bodies (right part of figure).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/sample_spectral.png"><img alt="../../_images/sample_spectral.png" src="../../_images/sample_spectral.png" style="width: 550px;" /></a>
+</div>
+<p>Modified NDWI(MNDWI) introduction help to more precisely identify water body area.</p>
+</div>
+<div class="section" id="spectral-sample">
+<h3>Spectral Sample<a class="headerlink" href="#spectral-sample" title="Permalink to this headline">¶</a></h3>
+<p>We assumed that the water quality level within a certain range of the monitoring site is consistent within a certain of time.
+Took the daily average of water quality level in database according to the datetime acquired of Landsat-8 data.
+A rectangle of 40 pixels around the monitoring station was selected corresponding to the area of 600m x 600m on the ground.
+One example of the spectral profile of corresponding pixels around one site station is shown in the figure below.
+Our test results showed that the size of the rectangle around each monitoring station had no significant effects on
+water-quality-level classification.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/train_sample.png"><img alt="../../_images/train_sample.png" src="../../_images/train_sample.png" style="width: 550px;" /></a>
+</div>
+</div>
+<div class="section" id="additional-features">
+<h3>Additional features<a class="headerlink" href="#additional-features" title="Permalink to this headline">¶</a></h3>
+<p>Besides origin band 1 to 7 as input features. Some band combination ratios were also included as additional features.</p>
+<p>There is high difference of sediment concentration between river and lake.
+Sediment concentration is strong correlated with turbidity.
+One simple estimation of turbidity is calculated by band combination or band ratio</p>
+<p>(p(Red)-p(Green))/(p(Red)+p(Green))</p>
+<p>p(Red)/p(Green)</p>
+<p>Normalized difference vegetation index (NDVI) is a indicator that can be used to access whether the target
+contains green vegetation. It can help model analyse water quality patterns in the water vegetation mix area.</p>
+<p>p(NIR)-p(Red)/p(NIR)+p(Red)</p>
+<p>Finally, normalized 10 features (7 band features and 3 band combination and ratios) with (40x40x12) size were selected as CNN input.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Methods.html" class="btn btn-neutral float-right" title="Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="background.html" class="btn btn-neutral float-left" title="Background" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

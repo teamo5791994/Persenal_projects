@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Results &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Discussion" href="Discussion.html" />
+    <link rel="prev" title="Methods" href="Methods.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../SIC/index.html">Thesis: Sea Ice Concentration Retrieval</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Water Quality Retrieval Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Methods.html">Methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#total-accuracy">Total Accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chaohu-lake">Chaohu Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downstream-of-yangtze-river">Downstream of Yangtze River</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quantitative-analysis">Quantitative Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Discussion.html">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../LUC/index.html">Land-use Classification Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../RIV/index.html">卫星图像产品</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Water Quality Retrieval Project</a> &raquo;</li>
+        
+      <li>Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/WQR/Results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="results">
+<h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
+<p>Here we defined a new version of water quality accessing method: top1 and top3 accuracy.</p>
+<p>It’s the same with normal image classification top1 accuracy which refers to the correctly classified samples divided by the total number of samples.</p>
+<p>However different from the top5 accuracy (Among the top five with the largest prediction probability vector, if contains the right class the prediction is correct),
+Top3 accuracy is if the predicted class is the right class or its adjacent classes, the prediction is correct.</p>
+<p>For example, if true class is II water quality level, top3 contains the predicted class of I, II, III. If true class is
+inferior V, top3 includes the predicted class of V, inferior V.</p>
+<p>The reason of setting this top3 discipline is that there is very high similarity between adjacent classes.
+Two different water quality level may be caused by only 0.1mg/L COD difference.
+However, this tiny change will not be reflected in the training data.
+Therefore, top3 works like a buffer to distinguish different types of water quality.</p>
+<div class="section" id="total-accuracy">
+<h2>Total Accuracy<a class="headerlink" href="#total-accuracy" title="Permalink to this headline">¶</a></h2>
+<p>60% of samples were used for training, 30% for validation and 10% for test. The total accuracy is shown bellow:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/total_accuracy.png"><img alt="../../_images/total_accuracy.png" src="../../_images/total_accuracy.png" style="width: 550px;" /></a>
+</div>
+<p>Overall, CNN model achieved better classification performance than LGB model both in top1 and top3 accuracy
+because of the more powerful learning ability of shallow and complex features from multispectral images.</p>
+<p>However, due to the indistinguishability of the data itself, both models were easy to stack in overfitting problem.
+We attempted to apply many regularization methods (L2, dropout, max_depth in LGB, etc) to reduce the model complexity.
+The gap between training and validation accuracy was controlled in a certain range to ensure the model with
+generalization ability to some extent.</p>
+</div>
+<div class="section" id="chaohu-lake">
+<h2>Chaohu Lake<a class="headerlink" href="#chaohu-lake" title="Permalink to this headline">¶</a></h2>
+<p>Chaohu lake located in Hefei, Anhui Province, is one of China’s five major freshwater lakes. Chaohu Lake has a water surface area of 780 km2,
+Industrial and municipal wastewater has contributed to the pollution and eutrophication of Chaohu Lake.
+Algal bloom has been broken out in Chaohu for several times.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/chaohu.png"><img alt="../../_images/chaohu.png" src="../../_images/chaohu.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">2019-04-06 path:120 row:38</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>According to daily average of Chaohu East site and Chaohu West site on 2019-04-06, the water quality
+of east part of Chaohu was III and the west part of Chaohu was V.</p>
+<p>The missing part in the east part of image maybe caused by cloud or the misidentify of water bodies of NDWI.
+This can be fixed by interpolation post processing.</p>
+<p>Furthermore, we can analyse water quality trend of lake with the change over time. As shown in the gif:</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/chaohu.gif"><img alt="../../_images/chaohu.gif" src="../../_images/chaohu.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">path:120 row:38</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The corresponding 4 daily average water quality level of monitoring site is shown in the figure.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/chaohu_monitoring_site2.png"><img alt="../../_images/chaohu_monitoring_site2.png" src="../../_images/chaohu_monitoring_site2.png" style="width: 550px;" /></a>
+</div>
+<p>The worst pollution area was on the north-western part of Chaohu Lake which locates next to Hefei city.
+Hefei’s industry is mainly producing fertilizers, and a large amount of wastewater containing P and N is discharged into the rivers
+and finally interflow into north-west of Chaohu Lake.</p>
+</div>
+<div class="section" id="downstream-of-yangtze-river">
+<h2>Downstream of Yangtze River<a class="headerlink" href="#downstream-of-yangtze-river" title="Permalink to this headline">¶</a></h2>
+<p>The Yangtze River is the longest river in China. It originated from QingHai province and
+flows through 11 provincial administrative regions.</p>
+<p>Continuous high quality Landsat8 images within a certain time range is the key to retrieve water quality in a large range.
+We collected 6 landsat8 scenes in downstream of Yangtze river during June 2019 .
+As shown in the image:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/changjiang1.png"><img alt="../../_images/changjiang1.png" src="../../_images/changjiang1.png" style="width: 700px;" /></a>
+</div>
+<p>The water quality of yangtze river was dominated by II and III level. Generally, it had good water quality levels,
+benefiting from high water flow and self-purification ability.</p>
+<p>Taihu lake located next to two of the most developed cities in China: Wuxi and Suzhou.
+It has also suffered from water eutrophication for a long time. A serious Blue algae broke out in 2007.
+In recent years, the government is stepping up efforts to purify the water quality of Taihu Lake.
+But the results are not sufficient, and the water quality of Taihu Lake is still not optimistic.</p>
+</div>
+<div class="section" id="quantitative-analysis">
+<h2>Quantitative Analysis<a class="headerlink" href="#quantitative-analysis" title="Permalink to this headline">¶</a></h2>
+<p>If the border of a lake or a river is determined, then we can do the quantitative analysis.
+Such as the area and percentage of different water quality.
+The analysis report can be used as a reference for the pollution source tracking and control.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/daguan.png"><img alt="../../_images/daguan.png" src="../../_images/daguan.png" style="width: 650px;" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Discussion.html" class="btn btn-neutral float-right" title="Discussion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Methods.html" class="btn btn-neutral float-left" title="Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

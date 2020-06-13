@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Methods" href="Methods.html" />
+    <link rel="prev" title="Background" href="Background.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../SIC/index.html">Thesis: Sea Ice Concentration Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../WQR/index.html">Water Quality Retrieval Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Land-use Classification Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Background.html">Background</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#satellite-dataset">Satellite Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ground-truth">Ground Truth</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Methods.html">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Land-use Classification Project</a> &raquo;</li>
+        
+      <li>Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/LUC/Dataset.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="satellite-dataset">
+<h2>Satellite Dataset<a class="headerlink" href="#satellite-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Here we use the 第三方提供的高分1号全色rgb数据，分辨率为两米，根据市级别区分。
+可以省略数据预处理步骤。节省获取数据的时间。
+数据遍布中国二十四个市区，也是我们公司主要布设空气检测设备的二十四个市区。我们将利用遥感影像
+对地面污染物的可能污染源进行溯源。</p>
+<div class="section" id="ground-truth">
+<h3>Ground Truth<a class="headerlink" href="#ground-truth" title="Permalink to this headline">¶</a></h3>
+<p>与其他项目不同的是，这里ground truth的选取相对更加困难。
+对于遥感数据来说，ground truth的选取或者标注都是耗时耗力过程。需要大量人力进行目视解译
+且大部分的标注都受标注人员主观影响。</p>
+<p>这里我们采用主观客观相结合的方法。这里对ground truth的选取分为两轮：
+1. 首先我们在我们主要城市中随机选取一些不同地物小型样本：选取模式为以选取点为中心周围30x30 pixel
+选取一轮不同类别的ground truth。利用一个简单的cnn模型对大范围内的影响进行预测。
+2. 从cnn预测结果中挑选效果非常好的范围，进行一定的修正，修改明显的错误。在作为U-net的训练输入。</p>
+<p>也就是利用第一轮cnn的预测结果进行筛选，作为Unet的标签ground truth.
+这样做的优点是可以快速扩充u-net的训练集，且unet的ground truth有更多的细节。
+缺点是如果cnn预测结果不好，需要继续添加一些第一步的训练样本，
+且u-net的预测精度可能以cnn的预测精度为瓶颈，难以提升。</p>
+<p>在没有充裕的时间等待非常精准的遥感标签来说，先用一种方法生成足量预测结果，再从这些结果中筛选出一定量作为标签
+是一个不错的方法。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Methods.html" class="btn btn-neutral float-right" title="Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Background.html" class="btn btn-neutral float-left" title="Background" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

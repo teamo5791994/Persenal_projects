@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Result &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Conclusion" href="Discussion.html" />
+    <link rel="prev" title="Methods" href="Methods.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thesis: Sea Ice Concentration Retrieval</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Methods.html">Methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Result</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#abbreviations">Abbreviations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#training-dataset">Training dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation-dataset">Validation dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-dataset">Test dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transferability-analysis">Transferability analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Discussion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WQR/index.html">Water Quality Retrieval Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LUC/index.html">Land-use Classification Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thesis: Sea Ice Concentration Retrieval</a> &raquo;</li>
+        
+      <li>Result</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/SIC/Results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="result">
+<h1>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h1>
+<p>Sea ice concentration is a value between 0 to 1. Therefore, we used the regression model
+performance evaluation metrics: mean error(E<sub>sgn</sub>), mean absolute error(E<sub>L1</sub>),
+standard deviation(E<sub>std</sub>) and root mean squared error(E<sub>rmse</sub>).</p>
+<p>The final error of each sample is shown in the table:</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Error statistic</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Set</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>E_sgn</p></th>
+<th class="head"><p>E_L1</p></th>
+<th class="head"><p>E_std</p></th>
+<th class="head"><p>E_rmse</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Training</p></td>
+<td><p>160711</p></td>
+<td><p>-0.0370</p></td>
+<td><p>0.0822</p></td>
+<td><p>0.1260</p></td>
+<td><p>0.1313</p></td>
+</tr>
+<tr class="row-odd"><td><p>Training</p></td>
+<td><p>160712</p></td>
+<td><p>-0.0061</p></td>
+<td><p>0.0820</p></td>
+<td><p>0.1383</p></td>
+<td><p>0.1384</p></td>
+</tr>
+<tr class="row-even"><td><p>Training</p></td>
+<td><p>160714</p></td>
+<td><p>-0.0167</p></td>
+<td><p>0.0296</p></td>
+<td><p>0.0829</p></td>
+<td><p>0.0846</p></td>
+</tr>
+<tr class="row-odd"><td><p>Training</p></td>
+<td><p>160715</p></td>
+<td><p>0.0129</p></td>
+<td><p>0.0744</p></td>
+<td><p>0.1314</p></td>
+<td><p>0.1320</p></td>
+</tr>
+<tr class="row-even"><td><p>Training</p></td>
+<td><p>160716</p></td>
+<td><p>-0.0338</p></td>
+<td><p>0.0697</p></td>
+<td><p>0.1183</p></td>
+<td><p>0.1230</p></td>
+</tr>
+<tr class="row-odd"><td><p>Training</p></td>
+<td><p>160723</p></td>
+<td><p>-0.0266</p></td>
+<td><p>0.0723</p></td>
+<td><p>0.1369</p></td>
+<td><p>0.1395</p></td>
+</tr>
+<tr class="row-even"><td><p>Training</p></td>
+<td><p>160724</p></td>
+<td><p>-0.0085</p></td>
+<td><p>0.0732</p></td>
+<td><p>0.1298</p></td>
+<td><p>0.1301</p></td>
+</tr>
+<tr class="row-odd"><td><p>Training</p></td>
+<td><p>160726</p></td>
+<td><p>-0.0005</p></td>
+<td><p>0.0368</p></td>
+<td><p>0.0970</p></td>
+<td><p>0.0971</p></td>
+</tr>
+<tr class="row-even"><td><p>Training</p></td>
+<td><p>Average</p></td>
+<td><p>-0.0145</p></td>
+<td><p>0.0650</p></td>
+<td><p>0.1201</p></td>
+<td><p>0.1220</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Validation</p></td>
+<td><p>160727</p></td>
+<td><p>0.0374</p></td>
+<td><p>0.0993</p></td>
+<td><p>0.1617</p></td>
+<td><p>0.1660</p></td>
+</tr>
+<tr class="row-odd"><td><p>Validation</p></td>
+<td><p>160705</p></td>
+<td><p>-0.0735</p></td>
+<td><p>0.1394</p></td>
+<td><p>0.1676</p></td>
+<td><p>0.1830</p></td>
+</tr>
+<tr class="row-even"><td><p>Validation</p></td>
+<td><p>Average</p></td>
+<td><p>-0.0181</p></td>
+<td><p>0.1194</p></td>
+<td><p>0.1647</p></td>
+<td><p>0.1745</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Test</p></td>
+<td><p>160706</p></td>
+<td><p>-0.0569</p></td>
+<td><p>0.1393</p></td>
+<td><p>0.1704</p></td>
+<td><p>0.1796</p></td>
+</tr>
+<tr class="row-odd"><td><p>Test</p></td>
+<td><p>160722</p></td>
+<td><p>-0.0305</p></td>
+<td><p>0.1292</p></td>
+<td><p>0.1814</p></td>
+<td><p>0.1839</p></td>
+</tr>
+<tr class="row-even"><td><p>Test</p></td>
+<td><p>Average</p></td>
+<td><p>-0.0437</p></td>
+<td><p>0.1343</p></td>
+<td><p>0.1759</p></td>
+<td><p>0.1818</p></td>
+</tr>
+</tbody>
+</table>
+<p>Minus E<sub>sgn</sub>means compared to SIC product, CNN model had underestimation of sea ice concentration
+in prediction results.
+Some datasets with quite low E<sub>rmse</sub>in training are occupied with a large open water area.</p>
+<div class="section" id="abbreviations">
+<h2>Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h2>
+<p>The table helps to explain the abbreviations in the following results:</p>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Abbreviations</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 31%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abb</p></th>
+<th class="head"><p>Full</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Est SIC</p></td>
+<td><p>Estimate SIC</p></td>
+<td><p>prediction result from CNN model</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ref SIC</p></td>
+<td><p>Reference SIC</p></td>
+<td><p>MWR SIC product (ground truth)</p></td>
+</tr>
+<tr class="row-even"><td><p>Avg SIC</p></td>
+<td><p>Average SIC</p></td>
+<td><p>Average of Est SIC to compared with Ref SIC</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="training-dataset">
+<h2>Training dataset<a class="headerlink" href="#training-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Training dataset 160712 is a very good example of showing the competence of the CNN model.
+As shown in the figure, the result demonstrates that the model can deal with incidence angle effect
+in SAR HH image and banding effect in SAR HV image.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/t160712.png"><img alt="../../_images/t160712.png" src="../../_images/t160712.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Training, 160712</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The range of colorbar in f (difference between ground truth and prediction) and that in others is not the same.</p>
+<ol class="arabic simple">
+<li><p>colorbar in difference figure range from -0.3 to 0.3</p></li>
+<li><p>colorbar in Est SIC, Ref SIC and Avg SIC range from 0 to 1</p></li>
+<li><p>The rest of the figures follow the same rules</p></li>
+</ol>
+</div>
+<p>Zoom into the rectangle area of the last image, more details show how good performance of the model
+in a water ice mixed area, even though the input HH image is seriously affected by incidence angle
+dependence effect (Fig a).</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/ts160712.png"><img alt="../../_images/ts160712.png" src="../../_images/ts160712.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Training subsets, 160712</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Deeper CNN network could effectively scrap the scalloping noise in HV image (Fig b and c). However,
+the cost was some misclassification at low backscattering ice area to some extent (rectangle area in Fig c).
+It is also shown in lower part of difference figure (Fig f).</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/t160723.png"><img alt="../../_images/t160723.png" src="../../_images/t160723.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Training, 160723</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="validation-dataset">
+<h2>Validation dataset<a class="headerlink" href="#validation-dataset" title="Permalink to this headline">¶</a></h2>
+<p>In the first year ice area, passive microwave products (ref SIC, ground truth) tended to
+perform very low percentage of sea ice, especially at the border between sea and ice (Fig d).
+Therefore these features were also learned by the model.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/v160727.png"><img alt="../../_images/v160727.png" src="../../_images/v160727.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Validation, 160727</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="test-dataset">
+<h2>Test dataset<a class="headerlink" href="#test-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The main error between predicted SIC and ground truth focus on the pure ice - very high
+SIC area (Fig e). The points below the straight line around 0.9 Ref SIC (Fig c) prove that many
+SIC values are underestimated by the CNN model in this case, which can be further improved.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/t160722.png"><img alt="../../_images/t160722.png" src="../../_images/t160722.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Test, 160722</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="transferability-analysis">
+<h2>Transferability analysis<a class="headerlink" href="#transferability-analysis" title="Permalink to this headline">¶</a></h2>
+<p>In Greenland, the formation of sea ice in summer has a certain commonality due to the effect of ocean currents.
+So I choose another sample of western coast of Greenland far from the training sample area to demonstrate the
+model can deal with time and geographical differences to some extent.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/p160615.png"><img alt="../../_images/p160615.png" src="../../_images/p160615.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Test, 160615</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Discussion.html" class="btn btn-neutral float-right" title="Conclusion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Methods.html" class="btn btn-neutral float-left" title="Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

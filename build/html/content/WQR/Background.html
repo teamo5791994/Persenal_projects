@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Background &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data" href="Dataset.html" />
+    <link rel="prev" title="Water Quality Retrieval Project" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../SIC/index.html">Thesis: Sea Ice Concentration Retrieval</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Water Quality Retrieval Project</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dataset.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Methods.html">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Results.html">Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discussion.html">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../LUC/index.html">Land-use Classification Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Water Quality Retrieval Project</a> &raquo;</li>
+        
+      <li>Background</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/WQR/background.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<p>Multispectral data (Landsat-8 and Sentinel-2) contain a wealth of spectral information,
+which has been widely used in water quality monitoring.
+The water quality indicators such as chlorophyll-a (Chl-a), turbidity and suspended solids (TSS)
+are often estimated from remote sensing data for their active optical properties. As shown in figure:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/remote_sensing_data_source.png"><img alt="../../_images/remote_sensing_data_source.png" src="../../_images/remote_sensing_data_source.png" style="width: 650px;" /></a>
+</div>
+<p><a class="reference external" href="../../_static/_asset/Water_quality_monitoring_and_evaluation_using_remote_sensing_techniques_in_China_a_systematic_review.pdf">reference</a>.</p>
+<p>However, the retrieval of other non-optical parameters, such as total nitrogen (TN), total phosphorus (TP),
+chemical oxygen demand (COD), dissolved oxygen (DO), etc, is more difficult than the optical parameters.</p>
+<p>Water quality level is a composite index for evaluating water quality based on multiple water-related parameters.
+According to Chinese water quality assessing standard GB3838-2002, the surface water quality in China
+can be divided into 6 levels: from the best to the worst are I, II, III, IV, V and Inferior V. Each level corresponds to a
+certain range of water quality parameters.</p>
+<p>Single-factor method is used to classify water quality, which means a parameter that exceeds its corresponding criterion
+with the highest proportion is selected for water-quality-level classification. Briefly speaking, water quality level is
+determined by the worst parameter content. For example, if a lake with I level in COD, TP, DO parameters and V level
+in TN parameter, the water quality level of this lake is V.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/GB3838-2002.png"><img alt="../../_images/GB3838-2002.png" src="../../_images/GB3838-2002.png" style="width: 650px;" /></a>
+</div>
+<p>If the water parameter exceeds the level V limit, the water body will be evaluated as Inferior V, including
+black odorous water.</p>
+<p>In a recent study, Fangling Pu el from Wuhan University used Landsat8 images and ground monitoring sites data, successfully
+trained the water quality classification model of Chaohu lake based on CNN, then transferred learning to Erhai and achieved reasonable results.
+<a class="reference external" href="https://www.mdpi.com/2072-4292/11/14/1674/htm">https://www.mdpi.com/2072-4292/11/14/1674/htm</a></p>
+<p>This article explored the possibility of directly categorizing water quality level using medium-resolution multispectral images.
+However, it is still restrained in a small areas of inland lakes.
+Here we hope to expand this idea to some extent, mainly focus on the two following directions to explore its universal possibility:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Not limited to specific lakes or a small amount of data for training, but extended to both large rivers and lakes.</p></li>
+<li><p>Add more features such as band combinations and band ratios as input.</p></li>
+<li><p>Alter CNN architecture.</p></li>
+</ul>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Dataset.html" class="btn btn-neutral float-right" title="Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Water Quality Retrieval Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

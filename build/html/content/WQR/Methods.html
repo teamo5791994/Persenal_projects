@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Methods &mdash; Siyu Liu Projects Introduction 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Results" href="Results.html" />
+    <link rel="prev" title="Dataset" href="Dataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Siyu Liu Projects Introduction
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../SIC/index.html">Thesis: Sea Ice Concentration Retrieval</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Water Quality Retrieval Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dataset.html">Dataset</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cnn-architecture">CNN architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lightgbm-lgb">LightGBM(LGB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyperopt">Hyperopt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Results.html">Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discussion.html">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../LUC/index.html">Land-use Classification Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Siyu Liu Projects Introduction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Water Quality Retrieval Project</a> &raquo;</li>
+        
+      <li>Methods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/WQR/Methods.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="methods">
+<h1>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cnn-architecture">
+<h2>CNN architecture<a class="headerlink" href="#cnn-architecture" title="Permalink to this headline">¶</a></h2>
+<p>Our CNN architecture has the following characteristics:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Small receptive field</p></li>
+<li><p>Pooling layers were replaced by a convolutional layer with increased stride.</p></li>
+<li><p>Introduced 1x1 Conv layers to increase number of feature maps.</p></li>
+<li><p>Adam was used as the optimization algorithms.</p></li>
+<li><p>Cross-entropy loss was used as criterion.</p></li>
+<li><p>Used lr_scheduler.ReduceLROnPlateau class to dynamically adjust the learning rate.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>There is no need for a large receptive field because the small input patch size and less texture features in water bodies.</p></li>
+<li><p>No pooling layers because I want to weaken the effect of spatial texture relationship and emphasize the importance of spectral information.</p></li>
+</ol>
+</div>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">CNN architecture</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Process</p></th>
+<th class="head"><p>Parameters</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>(40 40 12)</p></td>
+<td><p>Input patches size</p></td>
+</tr>
+<tr class="row-odd"><td><p>Conv2D</p></td>
+<td><p>(64 3 3)</p></td>
+<td><p>Number of filters and filter size</p></td>
+</tr>
+<tr class="row-even"><td><p>Stride</p></td>
+<td><p>2</p></td>
+<td><p>Size of stride</p></td>
+</tr>
+<tr class="row-odd"><td><p>BatchNorm</p></td>
+<td></td>
+<td><p>Accelerate convergence</p></td>
+</tr>
+<tr class="row-even"><td><p>Activation</p></td>
+<td><p>ReLU</p></td>
+<td><p>Activation function</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dropout</p></td>
+<td><p>0.5</p></td>
+<td><p>Fraction of the input units to drop</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>(20 20 64)</p></td>
+<td><p>Output size</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Conv2D</p></td>
+<td><p>(128 3 3)</p></td>
+<td><p>Number of filters and filter size</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stride</p></td>
+<td><p>2</p></td>
+<td><p>Size of stride</p></td>
+</tr>
+<tr class="row-even"><td><p>BatchNorm</p></td>
+<td></td>
+<td><p>Accelerate convergence</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activation</p></td>
+<td><p>ReLU</p></td>
+<td><p>Activation function</p></td>
+</tr>
+<tr class="row-even"><td><p>Dropout</p></td>
+<td><p>0.5</p></td>
+<td><p>Fraction of the input units to drop</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>(10 10 128)</p></td>
+<td><p>Output size</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Conv2D</p></td>
+<td><p>(256 3 3)</p></td>
+<td><p>Number of filters and filter size</p></td>
+</tr>
+<tr class="row-even"><td><p>Stride</p></td>
+<td><p>2</p></td>
+<td><p>Size of stride</p></td>
+</tr>
+<tr class="row-odd"><td><p>BatchNorm</p></td>
+<td></td>
+<td><p>Accelerate convergence</p></td>
+</tr>
+<tr class="row-even"><td><p>Activation</p></td>
+<td><p>ReLU</p></td>
+<td><p>Activation function</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dropout</p></td>
+<td><p>0.5</p></td>
+<td><p>Fraction of the input units to drop</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>(5 5 256)</p></td>
+<td><p>Output size</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Conv2D</p></td>
+<td><p>(512 1 1)</p></td>
+<td><p>Number of filters and filter size</p></td>
+</tr>
+<tr class="row-odd"><td><p>BatchNorm</p></td>
+<td></td>
+<td><p>Accelerate convergence</p></td>
+</tr>
+<tr class="row-even"><td><p>Activation</p></td>
+<td><p>ReLU</p></td>
+<td><p>Activation function</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>(5 5 512)</p></td>
+<td><p>Output size</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Dense</p></td>
+<td><p>2048</p></td>
+<td><p>Fully connected layer size</p></td>
+</tr>
+<tr class="row-even"><td><p>Activation</p></td>
+<td><p>ReLU</p></td>
+<td><p>Activation function</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dense</p></td>
+<td><p>6</p></td>
+<td><p>Number of classes</p></td>
+</tr>
+<tr class="row-even"><td><p>Activation</p></td>
+<td><p>Softmax</p></td>
+<td><p>Activation function</p></td>
+</tr>
+</tbody>
+</table>
+<p>The network was implemented by Pytorch and training on Titan 2080ti GPU.</p>
+</div>
+<div class="section" id="lightgbm-lgb">
+<h2>LightGBM(LGB)<a class="headerlink" href="#lightgbm-lgb" title="Permalink to this headline">¶</a></h2>
+<p>LightGBM is a relatively new gradient boosting framework. Compare to the other gradient classifier,
+LightGBM train much faster because of its distributed design and easy to get high accuracy with the following characteristics:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Decision tree algorithm based on Histogram</p></li>
+<li><p>Histogram subtraction for further speedup</p></li>
+<li><p>Leaf-wise growth strategy with depth limitation</p></li>
+<li><p>Sparse Optimization</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://github.com/microsoft/LightGBM">https://github.com/microsoft/LightGBM</a></p>
+</div>
+<div class="section" id="hyperopt">
+<h2>Hyperopt<a class="headerlink" href="#hyperopt" title="Permalink to this headline">¶</a></h2>
+<p>Hyperopt is a hyperparameters optimization function which can find the best value in a range of searching space.
+By providing more information about where your function is defined, and where you think the best values are, you allow algorithms in hyperopt to search more efficiently.</p>
+<p><a class="reference external" href="https://github.com/hyperopt/hyperopt">https://github.com/hyperopt/hyperopt</a></p>
+<p>In the LGB official documentation, optuna is recommended as the hyperparameters optimization packages. Compared with the
+hyperopt method, they use the same strategy based on a Bayesian optimization algorithm. Optuna introduce pruned trials method
+which can early stop the attempts with poor results to accelerate the training process.</p>
+<p>Optuna will be tested in this project in the future. Here we still use Hyperopt package for hyperparameters optimization.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Results.html" class="btn btn-neutral float-right" title="Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, naughtyba
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+.. csv-table:: CNN architecture
+   :header: "Process", "Parameters", "Description"
+   :widths: 20, 20, 40
+
+   Input,(50,50,2),Input patches size
+   Conv2D,(32,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   Conv2D,(32,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   MaxPooling2D,(2,2),Pooling window size
+   Dropout,0.25,Fraction of the input units to drop
+    , ,
+   Conv2D,(64,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   Conv2D,(64,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   MaxPooling2D,(2,2),Pooling window size
+   Dropout,0.25,Fraction of the input units to drop
+    , ,
+   Conv2D,(64,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   Conv2D,(64,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   MaxPooling2D,(2,2),Pooling window size
+   Dropout,0.25,Fraction of the input units to drop
+    , ,
+   Conv2D,(128,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   Conv2D,(12,3,3,2),Number of filters and filter size
+   BatchNorm, ,Accelerate convergence
+   Activation,ReLU,Activation function
+   MaxPooling2D,(2,2),Pooling window size
+   Dropout,0.25,Fraction of the input units to drop
+    , ,
+   Dense,1024,Fully connected layer size
+   Activation,ReLU,Activation function
+   Dense,1,Fully connected layer size
+   Activation,Linear,Activation function
